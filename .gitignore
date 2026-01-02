@@ -35,3 +35,6 @@ build/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Personal files
+SUBMISSION_EMAIL.md
