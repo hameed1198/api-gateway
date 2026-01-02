@@ -253,6 +253,17 @@ async def proxy_to_backend(
 # Health & Info Endpoints (No Auth Required)
 # =============================================================================
 
+@app.get("/", tags=["System"])
+async def root():
+    """Root endpoint - redirects to documentation."""
+    return {
+        "message": "Welcome to the API Gateway",
+        "documentation": "/docs",
+        "health": "/health",
+        "info": "/info"
+    }
+
+
 @app.get("/health", tags=["System"])
 async def health_check():
     """Health check endpoint."""
